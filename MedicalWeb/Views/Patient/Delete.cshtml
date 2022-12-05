@@ -1,0 +1,14 @@
+﻿@model MedicalWeb.Models.PatientViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>Delete</h2>
+<h3>Вы уверены, что хотите удалить?</h3>
+<div> 
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Delete" class="btn btn-default" /> 
+        @Html.ActionLink("Back to List", "List", "Patient"); 
+    }
+</div>

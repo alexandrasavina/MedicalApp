@@ -1,0 +1,46 @@
+﻿@model MedicalWeb.Models.UserViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Name, "Имя")<br />
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Login, "Логин")<br />
+            @Html.TextBoxFor(m => m.Login)
+            @Html.ValidationMessageFor(model => model.Login)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Password, "Пароль")<br />
+            @Html.TextBoxFor(m => m.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Gender, "Пол")<br />
+            @Html.TextBoxFor(m => m.Gender)
+            @Html.ValidationMessageFor(model => model.Gender)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Age, "Возраст")<br />
+            @Html.TextBoxFor(m => m.Age)
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Role, "Роль")<br />
+                @Html.TextBoxFor(m => m.Role)
+                @Html.ValidationMessageFor(model => model.Role)
+            </div>
+            <input type="submit" value="Save" class="btn btn-default" />
+            }
+    </body>
+</html>

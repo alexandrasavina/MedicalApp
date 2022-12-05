@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MedicalWeb.Models.UserViewModel>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+
+<html>
+<head>
+</head>
+
+<body>
+    @Html.ActionLink("Создать", "Create", "User")
+    @Html.ActionLink("Назад", "Index", "Home")
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Login)</th>
+            <th>@Html.DisplayNameFor(model => model.Age)</th>
+            <th>@Html.DisplayNameFor(model => model.Gender)</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.Name)</td>
+                <td> @Html.DisplayFor(modelItem => item.Login)</td>
+                <td> @Html.DisplayFor(modelItem => item.Age)</td>
+                <td> @Html.DisplayFor(modelItem => item.Gender)</td>
+
+                <td>
+                    @Html.ActionLink("Редактировать", "Edit",  new { id = item.Id }) |
+                    @Html.ActionLink("Просмотр", "Details","User", new { id = item.Id }) |
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

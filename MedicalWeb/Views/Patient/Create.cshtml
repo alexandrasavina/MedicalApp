@@ -1,0 +1,65 @@
+﻿@model MedicalWeb.Models.PatientViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    @using (Html.BeginForm("Create", "Patient", FormMethod.Post))
+    {
+        <div class="editor-label">
+            @Html.LabelFor(m => m.FirstName, "Имя")<br />
+            @Html.TextBoxFor(m => m.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+        @Html.LabelFor(m => m.LastName, "Фамилия")<br />
+        @Html.TextBoxFor(m => m.LastName)
+        @Html.ValidationMessageFor(model => model.LastName)
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Address, "Адрес")<br />
+            @Html.TextBoxFor(m => m.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+        @Html.LabelFor(m => m.Gender, "Пол")<br />
+        @Html.TextBoxFor(m => m.Gender)
+        @Html.ValidationMessageFor(model => model.Gender)
+        <div class="editor-label">
+            @Html.LabelFor(m => m.PassportNumber, "Серия и номер паспорта")<br />
+            @Html.TextBoxFor(m => m.PassportNumber)
+            @Html.ValidationMessageFor(model => model.PassportNumber)
+        </div>
+        @Html.LabelFor(m => m.PlaceIssuePassport, "Место выдачи паспорта")<br />
+        @Html.TextBoxFor(m => m.PlaceIssuePassport)
+        @Html.ValidationMessageFor(model => model.PlaceIssuePassport)
+        <div class="editor-label">
+            @Html.LabelFor(m => m.City, "Город")<br />
+            @Html.TextBoxFor(m => m.City)
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Contacts, "Номер телефона пациента")<br />
+            @Html.TextBox("phone")
+            @Html.TextBox("phone")
+            @Html.ValidationMessageFor(model => model.Contacts)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Contacts, "Номер телефона родственника пациента")<br />
+            Телефон
+            @Html.TextBox("relativePhone")
+            Имя
+            @Html.TextBox("namePhoneOwner")
+            Родственная связь
+            @Html.TextBox("relation")
+            @Html.ValidationMessageFor(model => model.Contacts)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Contacts, "Email")<br />
+            @Html.TextBox("email")
+            @Html.ValidationMessageFor(model => model.Contacts)
+        </div>
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+</body>
+</html>

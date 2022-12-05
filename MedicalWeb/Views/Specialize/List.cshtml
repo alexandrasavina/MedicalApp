@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MedicalWeb.Models.SpecializeViewModel>
+@{
+    ViewData["Title"] = "List";
+}
+
+
+<html>
+<head>
+</head>
+
+<body>
+    @Html.ActionLink("Создать", "Create", "Specialize")
+    @Html.ActionLink("Назад", "Index", "Home")
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.Name)</td>
+                <td>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Просмотр", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+

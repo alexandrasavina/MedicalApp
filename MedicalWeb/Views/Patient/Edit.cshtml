@@ -1,0 +1,100 @@
+﻿@using MedicalWeb.Models
+@model PatientViewModel 
+{
+    ViewBag.Title = "Edit";
+ }
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h4>Patient</h4>
+        <hr />
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DateIssuePassport, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.DateIssuePassport, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateIssuePassport, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PlaceIssuePassport, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.PlaceIssuePassport, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PlaceIssuePassport, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PassportNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.PassportNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PassportNumber, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DateTimeRigist, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.DateTimeRigist, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateTimeRigist, "", new { @class = "text-danger" })
+            </div>
+
+            @for (var i = 0; i < Model.Contacts.Count; i++)
+            {   
+                <div class="editor-label">
+                @if (Model.Contacts[i].Phone != null)
+                {
+                
+                @Html.LabelFor(model => model.Contacts[i].Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(m => Model.Contacts[i].Phone, new { htmlAttributes = new { @class = "form-control" } })
+               
+                }
+                @if (Model.Contacts[i].NamePhoneOwner != null)
+                {
+                    @Html.LabelFor(m => Model.Contacts[i].NamePhoneOwner, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(m => Model.Contacts[i].NamePhoneOwner, new { htmlAttributes = new { @class = "form-control" } })
+                }
+                @if (Model.Contacts[i].Relation != null)
+                {
+                    @Html.LabelFor(m => Model.Contacts[i].Relation, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(m => Model.Contacts[i].Relation, new { htmlAttributes = new { @class = "form-control" } })
+                }
+                @if (Model.Contacts[i].Email != null)
+                { 
+                    @Html.LabelFor(model => model.Contacts[i].Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(m => Model.Contacts[i].Email, new { htmlAttributes = new { @class = "form-control" } })
+                }
+                </div>
+            }
+
+        </div>
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List","Patient")
+</div>
+

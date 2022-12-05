@@ -1,0 +1,55 @@
+﻿@model MedicalWeb.Models.UserViewModel
+{
+    ViewBag.Title = "Edit";
+ }
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h4>Patient</h4>
+        <hr />
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Login)
+            @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.Role.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Role.Name, "", new { @class = "text-danger" })
+            </div>
+
+           
+
+        </div>
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List", "User")
+</div>
+
