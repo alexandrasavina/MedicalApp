@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180209070657_Initial.cs" />
+    <Compile Remove="Migrations\20180209072714_Initial.cs" />
+    <Compile Remove="Migrations\20180209073356_Initial.cs" />
+    <Compile Remove="Migrations\20180216072555_EditedGenderInUserModel.cs" />
+    <Compile Remove="Migrations\20180216110448_UserSpecialty2.cs" />
+    <Compile Remove="Migrations\20180216110811_UserSpecialty2.cs" />
+    <Compile Remove="Migrations\20180216112021_UserSpecialty2.cs" />
+    <Compile Remove="Migrations\20180216112248_UserSpecialty2.cs" />
+    <Compile Remove="Migrations\20180216112843_UserSpeciality.cs" />
+    <Compile Remove="Migrations\20180216113134_UserSpeciality2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web">
+      <HintPath>System.Web</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

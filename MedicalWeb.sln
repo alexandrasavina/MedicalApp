@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicalWeb", "MedicalWeb\MedicalWeb.csproj", "{E9A2305A-F5B3-4F9C-9B33-D748BBB34E29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE} = {806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}
+		{4DB913B8-E5AF-456D-9860-44918EABFDDC} = {4DB913B8-E5AF-456D-9860-44918EABFDDC}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medical.data.EF", "Medical.data.EF\Medical.data.EF.csproj", "{4DB913B8-E5AF-456D-9860-44918EABFDDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical.Localization", "Medical.Localization\Medical.Localization.csproj", "{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9A2305A-F5B3-4F9C-9B33-D748BBB34E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A2305A-F5B3-4F9C-9B33-D748BBB34E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A2305A-F5B3-4F9C-9B33-D748BBB34E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A2305A-F5B3-4F9C-9B33-D748BBB34E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB913B8-E5AF-456D-9860-44918EABFDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB913B8-E5AF-456D-9860-44918EABFDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB913B8-E5AF-456D-9860-44918EABFDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB913B8-E5AF-456D-9860-44918EABFDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806BFC95-8D9E-4EC2-85EA-DCC43D5559BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60039F64-6AD4-4FEC-BE98-3557C9329A3B}
+	EndGlobalSection
+EndGlobal

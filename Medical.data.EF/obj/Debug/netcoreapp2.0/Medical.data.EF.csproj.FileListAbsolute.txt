@@ -1,0 +1,17 @@
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.deps.json
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.dll
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.csproj.CoreCompileInputs.cache
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.AssemblyInfoInputs.cache
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.AssemblyInfo.cs
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.pdb
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.dll
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.pdb
+C:\Users\alexandra.savina\source\repos\MedicalWeb\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.csprojResolveAssemblyReference.cache
+C:\work\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.deps.json
+C:\work\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.dll
+C:\work\Medical.data.EF\bin\Debug\netcoreapp2.0\Medical.data.EF.pdb
+C:\work\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.csproj.CoreCompileInputs.cache
+C:\work\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.AssemblyInfoInputs.cache
+C:\work\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.AssemblyInfo.cs
+C:\work\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.dll
+C:\work\Medical.data.EF\obj\Debug\netcoreapp2.0\Medical.data.EF.pdb
